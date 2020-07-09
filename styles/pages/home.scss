@@ -17,7 +17,9 @@
     background-color: $dark-violet;
     color: $white;
     flex: 1;
-
+    .main--wrapper {
+      height: calc(100% - 68px);
+    }
     .main__content {
       width: 500px;
       margin: auto;
@@ -38,6 +40,26 @@
           -webkit-text-stroke-width: 1px;
           -webkit-text-stroke-color: $white;
           -webkit-text-fill-color: $dark-violet;
+        }
+      }
+    }
+  }
+
+  @include respond(mobile) {
+    .home__sidebar {
+      display: none;
+    }
+    .home__main {
+      .main--wrapper {
+        align-items: center;
+      }
+      .main__content {
+        padding: 0 1rem;
+        width: unset;
+        margin: unset;
+
+        .content__short-intro {
+          font-size: 3rem;
         }
       }
     }

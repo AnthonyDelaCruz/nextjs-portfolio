@@ -14,7 +14,7 @@ export default function Home() {
       </section>
       <section className="home__main">
         <Navbar />
-        <div className="h-100 d-flex">
+        <div className="main--wrapper d-flex">
           <div className="main__content">
             <span className="content__name">👋 Hi I'm Tony!</span>
             <div className="content__short-intro container">

@@ -7,3 +7,19 @@ $gray: #29312a;
 $font-animated: "Bangers", cursive;
 $font-main: "Do Hyeon", sans-serif;
 $dark-white: "#F8F8F8";
+
+$tablet: 786px;
+
+// mixins
+@mixin respond($breakpoint) {
+  @if $breakpoint==tablet {
+    @media screen and (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobile {
+    @media screen and (max-width: 480px) {
+      @content;
+    }
+  }
+}

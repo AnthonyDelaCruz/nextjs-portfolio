@@ -13,4 +13,15 @@ nav {
       transform: translateY(-5px);
     }
   }
+
+  @include respond(mobile) {
+    padding: 1rem;
+    display: flex !important;
+    justify-content: space-between;
+
+    .nav__links {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+  }
 }
