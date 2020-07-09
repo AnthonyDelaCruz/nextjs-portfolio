@@ -1,0 +1,21 @@
+@import "./vars.scss";
+
+@import "./pages/home.scss";
+@import "./pages/about.scss";
+
+@import "./components/navbar.scss";
+@import "./components/layout.scss";
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Do+Hyeon&display=swap");
+
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+main {
+  width: 100%;
+}

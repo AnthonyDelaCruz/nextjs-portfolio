@@ -1,0 +1,16 @@
+nav {
+  padding: 1rem;
+
+  .nav__links {
+    display: inline-block;
+    transition: all 0.5s;
+    font-family: $font-animated;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}

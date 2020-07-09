@@ -1,0 +1,45 @@
+.page-home {
+  display: flex;
+  min-height: 100vh;
+
+  .home__sidebar {
+    background-color: $gray;
+    color: $light-violet;
+    flex: 0.4;
+    padding: 1rem;
+
+    h1 {
+      text-align: center;
+      font-family: $font-animated;
+    }
+  }
+  .home__main {
+    background-color: $dark-violet;
+    color: $white;
+    flex: 1;
+
+    .main__content {
+      width: 500px;
+      margin: auto;
+      .content__name {
+        display: inline-block;
+        font-size: 25px;
+        transform: rotate(-13deg);
+        font-family: $font-animated;
+        font-weight: "bold";
+        letter-spacing: 1px;
+      }
+      .content__short-intro {
+        font-size: 4rem;
+        font-weight: bold;
+        font-family: $font-main;
+        letter-spacing: 1px;
+        span {
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: $white;
+          -webkit-text-fill-color: $dark-violet;
+        }
+      }
+    }
+  }
+}
