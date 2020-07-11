@@ -5,17 +5,19 @@
   flex-direction: column;
   background-color: $sailor-blue;
 
-  h1 {
+  .projects__header {
     font-family: $font-main;
     padding: 0.5rem;
-    color: $mint;
+    color: $white-smoke;
+
+    font-size: 3.5rem;
   }
 
   .projects {
     display: flex;
     flex: 1;
     justify-content: space-around;
-    margin-top: 2rem;
+    align-items: center;
     .project__item {
       flex: 1;
       margin: 0 10px;
@@ -24,6 +26,8 @@
       border-radius: 8px;
       background: $dark-blue;
       display: flex;
+      transition: all 0.5s;
+      cursor: pointer;
 
       .item__details {
         display: flex;
@@ -34,18 +38,41 @@
         position: relative;
         width: 200px;
         height: 200px;
-        background-color: $semi-dark-blue;
+        transition: all 0.3s;
+        background-color: rgba(51, 102, 204, 0.7);
         border-radius: 50%;
         font-family: $font-animated;
         font-size: 1.3rem;
         letter-spacing: 1px;
         span {
           color: $mint;
+          transition: all 0.5s;
         }
-
         svg {
+          transition: all 0.5s;
           color: $mint;
           margin-bottom: 10px;
+        }
+      }
+      .item__details--exists {
+        background-color: rgba(0, 0, 0, 0.8);
+        span {
+          color: $white;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 30px 5px -13px rgba(0, 0, 0, 0.42);
+        .item__details {
+          width: 100%;
+          height: 100%;
+          border-radius: unset;
+
+          span,
+          svg {
+            transform: scale(1.2);
+          }
         }
       }
     }
@@ -53,15 +80,16 @@
   .projects__notif {
     text-align: center;
     padding: 2rem;
-    color: $mint;
+    color: $white-smoke;
 
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: $font-main;
   }
 }
 .projects__nav {
-  background-color: $semi-dark-blue !important;
+  background-color: $sailor-blue !important;
   color: $white;
+  text-align: center;
   span {
     &:hover {
       color: $white;

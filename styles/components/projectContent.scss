@@ -1,0 +1,44 @@
+.container-project-content {
+  color: $white-smoke;
+  font-family: $font-animated;
+  padding: 1rem;
+  height: calc(100% - 36px);
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-size: 4rem;
+    letter-spacing: 4px;
+  }
+  .project-content__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    font-size: 2rem;
+    font-family: $font-main;
+    letter-spacing: 1px;
+    color: $white-smoke;
+    background: $light-sailor-blue;
+    margin-top: 2rem;
+    border-radius: 25px;
+    padding: 2rem;
+
+    .description__links {
+      font-size: 1.5rem;
+
+      .link__item {
+        margin-right: 2rem;
+
+        .item__link {
+          color: $mint;
+        }
+      }
+    }
+  }
+  .project-content__tech {
+    span {
+      font-size: 1.5rem;
+      margin-right: 1.5rem;
+    }
+  }
+}
