@@ -13,9 +13,9 @@ export default function Navbar({ customClassName }) {
       <Link href="/projects">
         <span className="nav__links">Projects</span>
       </Link>
-      <Link href="/contact">
+      {/* <Link href="/contact">
         <span className="nav__links">Contact</span>
-      </Link>
+      </Link> */}
     </nav>
   );
 }
