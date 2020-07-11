@@ -1,7 +1,6 @@
 import React from "react";
 
-export default function ProjectContent({ title, description, tech }) {
-  console.log("props", title);
+export default function ProjectContent({ title, description, tech }: any) {
   return (
     <div className="container-project-content">
       <h1>{title}</h1>
