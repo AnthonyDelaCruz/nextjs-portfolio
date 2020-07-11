@@ -1,7 +1,11 @@
 import React from "react";
 import Link from "next/link";
 
-export default function Navbar({ customClassName }) {
+type Props = {
+  customClassName?: string;
+};
+
+export default function Navbar({ customClassName }: Props) {
   return (
     <nav className={customClassName}>
       <Link href="/">
