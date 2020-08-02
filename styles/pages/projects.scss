@@ -1,23 +1,23 @@
-.page-projects {
-  height: calc(100vh - 68px);
-  padding: 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  background-color: $sailor-blue;
+.page-projects-container {
+  margin: 3rem 0;
+  padding: 3rem 0;
 
   .projects__header {
-    font-family: $font-main;
-    padding: 0.5rem;
-    color: $white-smoke;
-
-    font-size: 3.5rem;
+    font-family: $font-main2;
+    color: $four;
+    font-size: 4rem;
+    span {
+      -webkit-text-stroke-width: 1.5px;
+      -webkit-text-stroke-color: $four;
+      -webkit-text-fill-color: $one;
+    }
   }
 
   .projects {
     display: flex;
-    flex: 1;
     justify-content: space-around;
     align-items: center;
+    margin: 2rem 0;
     .project__item {
       flex: 1;
       margin: 0 10px;
@@ -80,10 +80,10 @@
   .projects__notif {
     text-align: center;
     padding: 2rem;
-    color: $white-smoke;
+    color: $two;
 
     font-size: 1.5rem;
-    font-family: $font-main;
+    font-family: $font-main3;
   }
 }
 .projects__nav {

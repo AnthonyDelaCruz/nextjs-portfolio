@@ -1,14 +1,21 @@
 nav {
-  padding: 1rem;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  width: 90px;
 
   .nav__links {
-    display: inline-block;
+    transform: rotate(90deg);
     transition: all 0.5s;
     font-family: $font-animated;
     font-size: 1.5rem;
     margin: 0 1rem;
     letter-spacing: 1px;
     cursor: pointer;
+    color: $white-smoke;
+    margin: 4rem 0;
     &:hover {
       transform: translateY(-5px);
     }

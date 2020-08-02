@@ -1,0 +1,72 @@
+.about {
+  color: $five;
+  letter-spacing: 0.125rem;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  h1 {
+    font-size: 4rem;
+    font-family: $font-main2;
+
+    span {
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: $five;
+      -webkit-text-fill-color: $one;
+    }
+  }
+  h2 {
+    font-size: 2rem;
+    font-family: $font-main2;
+  }
+
+  &__content {
+    font-size: 1.3rem;
+    font-family: $font-main3;
+    letter-spacing: 0.0938rem;
+    color: $two;
+  }
+  &__experience {
+    margin-top: 3rem;
+    h2 {
+      border-bottom: 1px solid $two;
+      padding-bottom: 10px;
+    }
+
+    .experience__item {
+      padding: 1rem 0;
+      color: $two;
+      h4 {
+        font-family: $font-main2;
+      }
+      div {
+        font-family: $font-main3;
+      }
+    }
+    .item--active {
+      color: $five;
+    }
+  }
+  &__skills {
+    margin-top: 3rem;
+    h2 {
+      margin-bottom: 1rem;
+    }
+    .skills__icons {
+      svg {
+        margin-right: 1rem;
+        color: $two;
+
+        &:hover {
+          color: $five;
+        }
+      }
+    }
+  }
+  &__resume-btn {
+    border: 1px solid $five !important;
+    color: $five !important;
+    background-color: transparent !important;
+    font-family: $font-main3;
+    border-radius: 0 !important;
+    outline: none !important;
+  }
+}

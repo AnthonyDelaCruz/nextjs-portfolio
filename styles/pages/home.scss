@@ -2,44 +2,35 @@
   display: flex;
   min-height: 100vh;
 
-  .home__sidebar {
-    background-color: $gray;
-    color: $light-violet;
-    flex: 0.4;
-    padding: 1rem;
-
-    h1 {
-      text-align: center;
-      font-family: $font-animated;
-    }
+  .home__content {
+    margin: auto;
   }
   .home__main {
-    background-color: $dark-violet;
-    color: $white;
-    flex: 1;
-    .main--wrapper {
-      height: calc(100% - 68px);
-    }
+    color: $three;
     .main__content {
-      width: 500px;
+      min-height: 100vh;
+      display: flex;
       margin: auto;
+      justify-content: center;
+      flex-direction: column;
       .content__name {
         display: inline-block;
         font-size: 25px;
-        transform: rotate(-13deg);
         font-family: $font-animated;
-        font-weight: "bold";
+
         letter-spacing: 1px;
+        color: $two;
       }
       .content__short-intro {
         font-size: 4rem;
         font-weight: bold;
-        font-family: $font-main;
+        font-family: $font-main2;
         letter-spacing: 1px;
+
         span {
-          -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: $white;
-          -webkit-text-fill-color: $dark-violet;
+          -webkit-text-stroke-width: 1.5px;
+          -webkit-text-stroke-color: $three;
+          -webkit-text-fill-color: $one;
         }
       }
     }

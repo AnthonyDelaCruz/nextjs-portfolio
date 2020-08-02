@@ -1,5 +1,8 @@
 import Head from "next/head";
 import Navbar from "@components/Navbar";
+import Contact from "@components/Contact";
+import About from "@components/About";
+import Projects from "@components/Projects";
 
 export default function Home() {
   return (
@@ -8,20 +11,24 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="home__sidebar">
-        <h1>TonyDC</h1>
-      </section>
-      <section className="home__main">
-        <Navbar />
-        <div className="main--wrapper d-flex">
-          <div className="main__content">
-            <span className="content__name">👋 Hi I'm Tony!</span>
-            <div className="content__short-intro container">
-              I like making <span>fun</span>, interactive things with code.
+      {/* <Navbar /> */}
+      <div className="home__content">
+        <section>
+          <div className="home__main container">
+            <div className="main--wrapper">
+              <div className="main__content">
+                <span className="content__name">👋 Hi I'm Tony!</span>
+                <div className="content__short-intro container">
+                  I like making <span>fun</span>, interactive things with code.
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <About />
+        <Projects />
+      </div>
+      <Contact />
     </div>
   );
 }
