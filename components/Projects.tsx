@@ -1,4 +1,4 @@
-import { FaLock } from "react-icons/fa";
+import { FaLock, FaGithubSquare, FaLink } from "react-icons/fa";
 import { useState } from "react";
 
 import Layout from "@components/Layout";
@@ -17,6 +17,8 @@ const projects = [
         "Personal portfolio made to showcase some React, HTML, CSS skills so far. But also to show some of the projects I work on my free time.",
       tech: ["NextJS", "ReactJS", "HTML", "CSS", "Sass"],
     },
+    githubUrl: "https://github.com/AnthonyDelaCruz/prtflo",
+    siteUrl: "",
   },
   {
     label: "SplashPhotography",
@@ -28,10 +30,9 @@ const projects = [
         "A simple client application that consumes the Unsplash API to display all kinds of data regarding images. But here, I built the UI to display images, their users info, collections, related collections and tags.",
       tech: ["Unsplash API", "NextJS", "ReactJS", "HTML", "CSS", "Sass"],
     },
+    githubUrl: "https://github.com/AnthonyDelaCruz/unsplash_client",
+    siteUrl: "",
   },
-  { label: "Coming Soon!", exists: false },
-  { label: "Coming Soon!", exists: false },
-  { label: "Coming Soon!", exists: false },
 ];
 
 export default function Projects() {
@@ -47,29 +48,36 @@ export default function Projects() {
 
   return (
     <section className="page-projects-container container">
-      <div className="projects__header">
+      <div className="projects__header mb-5">
         Current <span>projects</span>.
       </div>
       <div className="projects">
-        {/* {projects.map(({ label, exists, background, content }, i) => (
-          <div
-            key={`${label}_${i}`}
-            className="project__item"
-            style={{
-              backgroundImage: `url(${background})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            onClick={toggleModalAndSetContent({ ...content }, exists)}
-          >
-            <div
-              className={`item__details ${exists && "item__details--exists"}`}
-            >
-              {!exists && <FaLock size={50} />}
-              <span>{label}</span>
+        {projects.map(
+          ({ label, background, content, githubUrl, siteUrl }, i) => (
+            <div className="project__item mb-4">
+              <div>
+                <img height={220} width={350} src={background} />
+              </div>
+              <div className="project__info">
+                <div>
+                  <h2 className="mb-md-1">{label}</h2>
+                  <div>{content.tech.join(", ")}</div>
+                </div>
+                <p>{content.description}</p>
+                <div className="project__links">
+                  <span onClick={() => window.open(githubUrl)}>
+                    <FaGithubSquare size={25} />
+                    Github repo
+                  </span>
+                  <span>
+                    <FaLink size={25} />
+                    Deployed site
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
-        ))} */}
+          )
+        )}
       </div>
       <div className="projects__notif">More projects coming soon!</div>
       <Modal
