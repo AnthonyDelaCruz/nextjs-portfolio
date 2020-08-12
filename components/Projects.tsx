@@ -9,7 +9,6 @@ import ProjectContent from "@components/ProjectContent";
 const projects = [
   {
     label: "Portfolio",
-    exists: true,
     background: "/images/projects/portfolio.png",
     content: {
       title: "Personal portfolio",
@@ -22,7 +21,6 @@ const projects = [
   },
   {
     label: "SplashPhotography",
-    exists: true,
     background: "/images/projects/unsplash.png",
     content: {
       title: "SplashPhotography",
@@ -31,7 +29,18 @@ const projects = [
       tech: ["Unsplash API", "NextJS", "ReactJS", "HTML", "CSS", "Sass"],
     },
     githubUrl: "https://github.com/AnthonyDelaCruz/unsplash_client",
-    siteUrl: "",
+    siteUrl: "https://unsplash-client.now.sh/",
+  },
+  {
+    label: "Zivmi",
+    background: "/images/projects/zivmi.png",
+    content: {
+      title: "Zivmi",
+      description: "A fictional landing page for a mobile application.",
+      tech: ["ReactJS", "HTML", "CSS", "Sass", "Create React App"],
+    },
+    githubUrl: "https://github.com/AnthonyDelaCruz/zivmi",
+    siteUrl: "https://zivmi.vercel.app/",
   },
 ];
 
@@ -56,7 +65,16 @@ export default function Projects() {
           ({ label, background, content, githubUrl, siteUrl }, i) => (
             <div className="project__item mb-4">
               <div>
-                <img height={220} width={350} src={background} />
+                <img
+                  style={{
+                    objectFit: "cover",
+                    border: "1px solid #ffff9f",
+                    boxShadow: "-5px 5px 0px 0px #ffff9f",
+                  }}
+                  height={220}
+                  width={350}
+                  src={background}
+                />
               </div>
               <div className="project__info">
                 <div>
@@ -69,10 +87,12 @@ export default function Projects() {
                     <FaGithubSquare size={25} />
                     Github repo
                   </span>
-                  <span>
-                    <FaLink size={25} />
-                    Deployed site
-                  </span>
+                  {label !== "Portfolio" && (
+                    <span onClick={() => window.open(siteUrl)}>
+                      <FaLink size={25} />
+                      Live site
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
