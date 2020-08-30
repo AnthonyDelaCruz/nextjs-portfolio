@@ -28,3 +28,38 @@ body {
 main {
   width: 100%;
 }
+
+footer {
+  font-family: $font-main3;
+  color: $white-smoke;
+  letter-spacing: 1.5px;
+
+  h2 {
+    font-family: $font-main2;
+  }
+  .quote-header {
+    font-size: 1.25rem;
+    border-bottom: 1px solid $white;
+  }
+  .quote-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .quote {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  }
+  .btn {
+    &:focus {
+      outline: none;
+      box-shadow: unset;
+    }
+  }
+  .form-control {
+    &:focus {
+      outline: 0;
+      border-color: unset;
+    }
+  }
+}

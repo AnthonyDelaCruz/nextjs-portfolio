@@ -68,8 +68,8 @@ export default function Projects() {
                 <img
                   style={{
                     objectFit: "cover",
-                    border: "1px solid #ffff9f",
-                    boxShadow: "-5px 5px 0px 0px #ffff9f",
+                    border: "1px solid #8B4789",
+                    boxShadow: "-5px 5px 0px 0px #8B4789",
                   }}
                   height={220}
                   width={350}

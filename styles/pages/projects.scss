@@ -4,11 +4,11 @@
 
   .projects__header {
     font-family: $font-main2;
-    color: $four;
+    color: $six;
     font-size: 4rem;
     span {
       -webkit-text-stroke-width: 1.5px;
-      -webkit-text-stroke-color: $four;
+      -webkit-text-stroke-color: $six;
       -webkit-text-fill-color: $one;
     }
   }
@@ -24,7 +24,7 @@
         padding: 0 1rem;
         h2 {
           font-family: $font-main2;
-          color: $four;
+          color: $six;
         }
         div,
         p {
