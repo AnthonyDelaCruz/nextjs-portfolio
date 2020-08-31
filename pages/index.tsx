@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { motion } from "framer-motion";
 
 import Navbar from "@components/Navbar";
 import Contact from "@components/Contact";
@@ -39,19 +40,27 @@ export default function Home() {
   }, []);
   return (
     <div className="page-home">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <div className="home__content">
         <section>
           <div className="home__main container">
             <div className="main--wrapper">
               <div className="main__content">
-                <span className="content__name">👋 Hi I'm Tony!</span>
-                <div className="content__short-intro container">
+                <motion.span
+                  initial={{ opacity: 0, y: -80 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7, duration: 0.5 }}
+                  className="content__name"
+                >
+                  👋 Hi I'm Tony!
+                </motion.span>
+                <motion.div
+                  initial={{ opacity: 0, y: -100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.5 }}
+                  className="content__short-intro container"
+                >
                   I like making <span>fun</span>, interactive things with code.
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

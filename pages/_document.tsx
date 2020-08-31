@@ -9,7 +9,7 @@ class MyDocument extends Document {
   loadEmailJs = () => {
     return {
       __html: `
-        emailjs.init("user_9tKg1D3DrUI6BoD3bquBc") 
+        emailjs.init("user_9tKg1D3DrUI6BoD3bquBc")
       `,
     };
   };
@@ -17,6 +17,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <title>TonyDC.</title>
           <script
             type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"

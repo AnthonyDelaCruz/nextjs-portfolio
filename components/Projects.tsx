@@ -5,6 +5,7 @@ import Layout from "@components/Layout";
 import Navbar from "@components/Navbar";
 import Modal from "@components/Modal";
 import ProjectContent from "@components/ProjectContent";
+import Zoom from "react-reveal/Zoom";
 
 const projects = [
   {
@@ -36,7 +37,8 @@ const projects = [
     background: "/images/projects/zivmi.png",
     content: {
       title: "Zivmi",
-      description: "A fictional landing page for a mobile application.",
+      description:
+        "A fictional landing page ( desktop only ) for a mobile application.",
       tech: ["ReactJS", "HTML", "CSS", "Sass", "Create React App"],
     },
     githubUrl: "https://github.com/AnthonyDelaCruz/zivmi",
@@ -60,45 +62,47 @@ export default function Projects() {
       <div className="projects__header mb-5">
         Current <span>projects</span>.
       </div>
-      <div className="projects">
-        {projects.map(
-          ({ label, background, content, githubUrl, siteUrl }, i) => (
-            <div className="project__item mb-4">
-              <div>
-                <img
-                  style={{
-                    objectFit: "cover",
-                    border: "1px solid #8B4789",
-                    boxShadow: "-5px 5px 0px 0px #8B4789",
-                  }}
-                  height={220}
-                  width={350}
-                  src={background}
-                />
-              </div>
-              <div className="project__info">
+      <Zoom cascade>
+        <div className="projects">
+          {projects.map(
+            ({ label, background, content, githubUrl, siteUrl }, i) => (
+              <div className="project__item mb-4">
                 <div>
-                  <h2 className="mb-md-1">{label}</h2>
-                  <div>{content.tech.join(", ")}</div>
+                  <img
+                    style={{
+                      objectFit: "cover",
+                      border: "1px solid #8B4789",
+                      boxShadow: "-5px 5px 0px 0px #8B4789",
+                    }}
+                    height={220}
+                    width={350}
+                    src={background}
+                  />
                 </div>
-                <p>{content.description}</p>
-                <div className="project__links">
-                  <span onClick={() => window.open(githubUrl)}>
-                    <FaGithubSquare size={25} />
-                    Github repo
-                  </span>
-                  {label !== "Portfolio" && (
-                    <span onClick={() => window.open(siteUrl)}>
-                      <FaLink size={25} />
-                      Live site
+                <div className="project__info">
+                  <div>
+                    <h2 className="mb-md-1">{label}</h2>
+                    <div>{content.tech.join(", ")}</div>
+                  </div>
+                  <p>{content.description}</p>
+                  <div className="project__links">
+                    <span onClick={() => window.open(githubUrl)}>
+                      <FaGithubSquare size={25} />
+                      Github repo
                     </span>
-                  )}
+                    {label !== "Portfolio" && (
+                      <span onClick={() => window.open(siteUrl)}>
+                        <FaLink size={25} />
+                        Live site
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          )
-        )}
-      </div>
+            )
+          )}
+        </div>
+      </Zoom>
       <div className="projects__notif">More projects coming soon!</div>
       <Modal
         isOpen={isModalOpen}
