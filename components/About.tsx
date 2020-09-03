@@ -50,9 +50,9 @@ export default function About() {
             <FaGit size={40} />
           </div>
         </div>
-        <Button className="about__resume-btn mt-5" variant="primary">
+        {/* <Button className="about__resume-btn mt-5" variant="primary">
           View my CV for more details
-        </Button>
+        </Button> */}
       </section>
     </Fade>
   );

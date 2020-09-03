@@ -14,9 +14,9 @@ export default function Contact() {
       <motion.div whileHover="hover" variants={variants}>
         <FaLinkedin size={35} />
       </motion.div>
-      <motion.div whileHover="hover" variants={variants}>
+      {/* <motion.div whileHover="hover" variants={variants}>
         <FaAt size={35} />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }

@@ -67,7 +67,7 @@ export default function Home() {
         </section>
         <About />
         <Projects />
-        <footer className="py-md-4 mb-4">
+        {/* <footer className="py-md-4 mb-4">
           <div className="container">
             <div className="d-flex">
               <div style={{ flex: 1 }} className="quote-container pr-md-4">
@@ -110,7 +110,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </footer>
+        </footer> */}
       </div>
       <Contact />
     </div>
