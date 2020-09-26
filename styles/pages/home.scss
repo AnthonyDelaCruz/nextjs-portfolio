@@ -1,7 +1,6 @@
 .page-home {
-  display: flex;
   min-height: 100vh;
-
+  width: inherit;
   .home__content {
     margin: auto;
   }
@@ -37,9 +36,6 @@
   }
 
   @include respond(mobile) {
-    .home__sidebar {
-      display: none;
-    }
     .home__main {
       .main--wrapper {
         align-items: center;
@@ -50,7 +46,7 @@
         margin: unset;
 
         .content__short-intro {
-          font-size: 3rem;
+          font-size: 2.5rem;
         }
       }
     }

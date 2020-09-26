@@ -16,7 +16,13 @@
   .projects {
     .project__item {
       display: flex;
-
+      .project__snapshot {
+        width: 25rem;
+        height: 13.75rem;
+        object-fit: cover;
+        border: 1px solid #8b4789;
+        box-shadow: -5px 5px 0px 0px #8b4789;
+      }
       .project__info {
         display: flex;
         flex-direction: column;
@@ -64,7 +70,33 @@
     font-size: 1.5rem;
     font-family: $font-main3;
   }
+
+  @include respond(tablet) {
+    padding: 3rem 0rem;
+    margin-bottom: unset;
+    .projects__header {
+      font-size: 2.5rem;
+    }
+    .projects {
+      .project__item {
+        display: flex;
+        flex-direction: column;
+
+        .project__snapshot {
+          width: 100%;
+          margin-bottom: 1.5rem;
+        }
+        .project__info {
+          padding: unset;
+          h2 {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
 }
+
 .projects__nav {
   background-color: $sailor-blue !important;
   color: $white;

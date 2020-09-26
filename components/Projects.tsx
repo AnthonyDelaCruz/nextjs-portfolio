@@ -15,7 +15,7 @@ const projects = [
       title: "Personal portfolio",
       description:
         "Personal portfolio made to showcase some React, HTML, CSS skills so far. But also to show some of the projects I work on my free time.",
-      tech: ["NextJS", "ReactJS", "HTML", "CSS", "Sass"],
+      tech: ["NextJS", "ReactJS", "HTML", "CSS", "Sass", "React Icons"],
     },
     githubUrl: "https://github.com/AnthonyDelaCruz/prtflo",
     siteUrl: "",
@@ -27,7 +27,7 @@ const projects = [
       title: "SplashPhotography",
       description:
         "A simple client application that consumes the Unsplash API to display all kinds of data regarding images. But here, I built the UI to display images, their users info, collections, related collections and tags.",
-      tech: ["Unsplash API", "NextJS", "ReactJS", "HTML", "CSS", "Sass"],
+      tech: ["Unsplash", "NextJS", "ReactJS", "HTML", "CSS", "Sass"],
     },
     githubUrl: "https://github.com/AnthonyDelaCruz/unsplash_client",
     siteUrl: "https://unsplash-client.now.sh/",
@@ -39,10 +39,28 @@ const projects = [
       title: "Zivmi",
       description:
         "A fictional landing page ( desktop only ) for a mobile application.",
-      tech: ["ReactJS", "HTML", "CSS", "Sass", "Create React App"],
+      tech: ["HTML", "CSS", "Bootstrap", "Create React App"],
     },
     githubUrl: "https://github.com/AnthonyDelaCruz/zivmi",
     siteUrl: "https://zivmi.vercel.app/",
+  },
+  {
+    label: "Github User Search",
+    background: "/images/projects/githubUserSearch.png",
+    content: {
+      title: "Github User Search",
+      description: "React app using Fusion charts to display Github users,",
+      tech: [
+        "Fusion Charts",
+        "Auth0",
+        "React Router",
+        "Styled Components",
+        "React Icons",
+        "Create React App",
+      ],
+    },
+    githubUrl: "https://github.com/AnthonyDelaCruz/GithubSearch",
+    siteUrl: "https://user-github-search.vercel.app/",
   },
 ];
 
@@ -67,18 +85,7 @@ export default function Projects() {
           {projects.map(
             ({ label, background, content, githubUrl, siteUrl }, i) => (
               <div className="project__item mb-4">
-                <div>
-                  <img
-                    style={{
-                      objectFit: "cover",
-                      border: "1px solid #8B4789",
-                      boxShadow: "-5px 5px 0px 0px #8B4789",
-                    }}
-                    height={220}
-                    width={350}
-                    src={background}
-                  />
-                </div>
+                <img className="img-fluid project__snapshot" src={background} />
                 <div className="project__info">
                   <div>
                     <h2 className="mb-md-1">{label}</h2>

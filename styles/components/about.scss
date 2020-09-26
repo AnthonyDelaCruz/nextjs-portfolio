@@ -69,4 +69,29 @@
     border-radius: 0 !important;
     outline: none !important;
   }
+
+  @include respond(mobile) {
+    margin-bottom: unset;
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    &__content {
+      font-size: 1.2rem;
+    }
+    &__experience {
+      .experience__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+      }
+    }
+    &__skills {
+      .skills__icons {
+        display: flex;
+      }
+    }
+  }
 }
