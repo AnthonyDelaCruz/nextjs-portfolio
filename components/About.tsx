@@ -1,9 +1,10 @@
+import { open } from "inspector";
 import React from "react";
-import { Button } from "react-bootstrap";
 import { FaReact, FaJs, FaHtml5, FaCss3, FaSass, FaGit } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
 
 export default function About() {
+  const openSymphWebsite = () => window.open("https://www.symph.co/");
   return (
     <Fade bottom>
       <section className="about container">
@@ -18,7 +19,12 @@ export default function About() {
         </div>
         <div className="about__experience">
           <h2>Experience.</h2>
-          <div className="experience__item item--active d-flex justify-content-between align-items-center">
+          <div className="experience__item item--active item--link d-flex justify-content-between align-items-center">
+            <h4 onClick={openSymphWebsite}>Symph</h4>
+            <div>Frontend developer</div>
+            <div>Nov 2020 - Present</div>
+          </div>
+          <div className="experience__item d-flex justify-content-between align-items-center">
             <h4>Freelancer</h4>
             <div>Frontend developer</div>
             <div>May 2020 - Present</div>

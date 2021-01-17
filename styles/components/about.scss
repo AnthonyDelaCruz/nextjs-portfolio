@@ -44,6 +44,13 @@
     .item--active {
       color: $five;
     }
+    .item--link h4 {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   &__skills {
     margin-top: 3rem;
