@@ -27,7 +27,7 @@ export default function About() {
           <div className="experience__item d-flex justify-content-between align-items-center">
             <h4>Freelancer</h4>
             <div>Frontend developer</div>
-            <div>May 2020 - Present</div>
+            <div>May 2020 - Oct 2020</div>
           </div>
           <div className="experience__item d-flex justify-content-between align-items-center">
             <h4>PushfitTV</h4>
